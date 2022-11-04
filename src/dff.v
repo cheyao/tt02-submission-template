@@ -1,5 +1,5 @@
 module dff(input wire [7:0] io_in,
-        output wire [7:0] io_out);
+           output wire [7:0] io_out);
     wire clk;
     wire reset;
     wire d1;
@@ -25,7 +25,7 @@ module dff(input wire [7:0] io_in,
     reg dff5;
     reg dff6;
 
-    assign io_out = {2'b0, dff1, dff2, dff3, dff4, dff5, dff6};
+    assign io_out = {2'b0, dff6, dff5, dff4, dff3, dff2, dff1};
 
     always @(posedge clk) begin
         dff1 = d1;

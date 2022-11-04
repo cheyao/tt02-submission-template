@@ -2,10 +2,10 @@
 # TinyTapeout project information
 project:
   wokwi_id:    0        # If using wokwi, set this to your project's ID
-#  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
-#    - counter.v
+  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
+    - dff.v
 #    - decoder.v
-#  top_module:  "seven_segment_seconds"      # put the name of your top module here, make it unique by prepending your github username
+  top_module:  "dff"      # put the name of your top module here, make it unique by prepending your github username
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
 # it does and how to operate it.
@@ -14,12 +14,12 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       ""      # Your name
-  discord:      ""      # Your discord handle
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  author:       "Cyao"      # Your name
+  discord:      "Cyao#4035"      # Your discord handle
+  title:        "6 D flip flops"      # Project title
+  description:  "6 D flip flops"      # Short description of what your project does
+  how_it_works: "6 D flip flops"      # Longer description of how the project works
+  how_to_test:  "Test each D flip flop"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  ""      # Describe any external hardware needed
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
@@ -28,19 +28,19 @@ documentation:
   inputs:               # a description of what the inputs do
     - clock
     - reset
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - d1
+    - d2
+    - d3
+    - d4
+    - d5
+    - d6
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    - q6
+    - none
     - none
 

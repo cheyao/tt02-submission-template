@@ -140,6 +140,14 @@ jobs:
         path: 'tinytapeout.gds.gltf'
         key: ${{ runner.os }}-viewer-${{ github.run_id }}
 
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+          # path depends on the tag and the module name
+          name: All
+          path: |
+            *
+
   artifact:
     needs:
     - gds
